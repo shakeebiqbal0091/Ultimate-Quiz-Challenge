@@ -13,13 +13,10 @@ const parseGeminiResponse = (responseText: string): Question[] => {
 
 export const generateQuizQuestions = async (topic: string, difficulty: string): Promise<Question[]> => {
   try {
-    if (!process.env.API_KEY) {
-      throw new Error("API Key is missing.");
-    }
-
+    // Fix: Use process.env.API_KEY exclusively as per guidelines.
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     
-    const prompt = `Generate 5 multiple choice quiz questions about "${topic}" at a "${difficulty}" difficulty level.
+    const prompt = `Generate 20 multiple choice quiz questions about "${topic}" at a "${difficulty}" difficulty level.
     Return the response strictly as a JSON array of objects.
     Each object must have:
     - id: a unique number
