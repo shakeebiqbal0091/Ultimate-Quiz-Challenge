@@ -1,0 +1,5 @@
+{
+  "name": "Ultimate Quiz Challenge",
+  "description": "A modern, interactive quiz application featuring a sleek UI, immediate feedback, score tracking, and the ability to generate infinite new quizzes using Google Gemini AI.",
+  "requestFramePermissions": []
+}
